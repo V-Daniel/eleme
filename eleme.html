@@ -52,7 +52,6 @@
                         timeout = setTimeout(step,4000);
                     }
                 }(i);
-                //定时器播放动画
                 if(i === 0){
                     var step = function(){
                         oClick[flag].className = "page-number";
@@ -70,24 +69,25 @@
 <body>
 
 <header class="topbar" role="navigation">
-    <div class="container">
+    <div class="container contain">
         <h1>
-            <a href="https://www.ele.me/" hardjump="" class="topbar-logo icon-logo">
+            <a href="https://www.ele.me/" class="topbar-logo icon-logo">
                 <span>饿了么</span>
             </a>
         </h1>
-        <a href="https://www.ele.me/" hardjump="" class="topbar-item topbar-homepage focus">首页</a>
-        <a href="https://www.ele.me/premium/wtw27pnxv422" hardjump="" class="topbar-item ng-scope">品牌商家
+        <a href="https://www.ele.me/" class="topbar-item topbar-homepage focus">首页</a>
+        <a href="https://www.ele.me/premium/wtw27pnxv422" class="topbar-item">
+            品牌商家
             <i class="elemeicon elemeicon-hot"></i>
         </a>
-        <a href="https://www.ele.me/profile/order" hardjump="" class="topbar-item">我的订单</a>
+        <a href="https://www.ele.me/profile/order" class="topbar-item">我的订单</a>
         <a href="https://kaidian.ele.me/" target="_blank" class="topbar-item">加盟合作</a>
         <nav class="topbar-nav">
-            <a href="https://www.ele.me/gift" hardjump="" class="topbar-nav-link">
+            <a href="https://www.ele.me/gift" class="topbar-nav-link">
                 <i class="topbar-nav-icon icon-gift"></i>
                 积分商城
             </a>
-            <a href="https://www.ele.me/support/center" hardjump="" class="topbar-nav-link" target="_blank">
+            <a href="https://www.ele.me/support/center" class="topbar-nav-link" target="_blank">
                 <i class="topbar-nav-icon icon-service"></i>
                 服务中心
             </a>
@@ -102,7 +102,7 @@
         
         <div class="topbar-profilebox">
             <span class="topbar-profilebox-avatar icon-profile"></span>
-            <span class="">
+            <span>
                 <a target="_blank" href="https://account.ele.me/login">登录</a>
                 /
                 <a target="_blank" href="https://account.ele.me/register">注册</a>
@@ -117,12 +117,12 @@
 <aside class="sidebar" role="complementary">
     <div class="sidebar-tabs">
         <div class="toolbar-tabs-middle">
-            <a class="toolbar-btn icon-order toolbar-close" href="https://www.ele.me/profile/order" hardjump=""></a>
+            <a class="toolbar-btn icon-order" href="https://www.ele.me/profile/order"></a>
             <div class="toolbar-separator"></div>
-            <a class="toolbar-cartbtn icon-cart toolbar-open" href="JavaScript:" template="cart">购物车</a>
+            <a class="toolbar-cartbtn icon-cart" href="JavaScript:">购物车</a>
             <div class="toolbar-separator"></div>
-            <a class="toolbar-btn icon-notice toolbar-open modal-hide" href="JavaScript:" template="message"></a>
-            <a class="toolbar-btn icon-history toolbar-open" href="JavaScript:" template="history" tooltip="浏览历史" title="浏览历史" tooltip-placement="left" ubt-click="393"></a>
+            <a class="toolbar-btn icon-notice" href="JavaScript:"></a>
+            <a class="toolbar-btn icon-history" href="JavaScript:" title="浏览历史"></a>
         </div>
         <div class="toolbar-tabs-bottom">
             <div class="toolbar-btn icon-QR-code">
@@ -134,24 +134,24 @@
                     </a>
                 </div>
             </div>
-            <a class="toolbar-btn icon-service" online-service="" tooltip="在线客服" title="在线客服" tooltip-placement="left" id="live800iconlink" target="_blank" href="JavaScript:" style="visibility: visible;"></a>
-            <a class="toolbar-btn sidebar-btn-backtop icon-top" tooltip="回到顶部" title="回到顶部" href="JavaScript:" tooltip-placement="left" style="visibility: hidden;"></a>
+            <a class="toolbar-btn icon-service" title="在线客服" target="_blank" href="JavaScript:" style="visibility: visible;"></a>
+            <a class="toolbar-btn sidebar-btn-backtop icon-top" title="回到顶部" href="JavaScript:" style="visibility: hidden;"></a>
         </div>
     </div>
 </aside>
-<div role="main">
+<main role="main">
     <div class="container">
-        <div class="location" role="navigation" location="">
+        <div class="location" role="navigation">
             <span>当前位置:</span>
             <span class="location-current">
-                <a class="inherit ng-binding" href="https://www.ele.me/place/wtw27pnxv422">闵行区上海交通大学(闵行校区)内</a>
+                <a class="inherit" href="https://www.ele.me/place/wtw27pnxv422">闵行区上海交通大学(闵行校区)内</a>
             </span>
             <span class="location-change">
-                <a hardjump="" href="https://www.ele.me/home">[切换地址]</a>
-                <ul class="dropbox location-dropbox" ubt-visit="398">
+                <a href="https://www.ele.me/home">[切换地址]</a>
+                <ul class="dropbox location-dropbox">
                     <li class="arrow"></li>
                     <li class="changelocation">
-                        <a hardjump="" href="https://www.ele.me/home">
+                        <a href="https://www.ele.me/home">
                             修改收货地址
                             <span class="icon-location"></span>
                         </a>
@@ -160,9 +160,9 @@
             </span>
         </div>
         <div class="place-search" role="search" search-input="">
-            <a class="place-search-btn icon-search" ubt-click="403" title="搜索商家或美食" ubt-data-keyword=""></a>
+            <a class="place-search-btn icon-search" title="搜索商家或美食" ubt-data-keyword=""></a>
             <label for="globalsearch">搜索商家或美食</label>
-            <input id="globalsearch" class="place-search-input ng-pristine ng-valid" autocomplete="" placeholder="搜索商家,美食...">
+            <input id="globalsearch" class="place-search-input" autocomplete="" placeholder="搜索商家,美食...">
         </div>
         <span class="justify_fix"></span>
     </div>
@@ -189,25 +189,25 @@
             </ol>
         </div>
     </div>
-    <div class="place-tab container ng-scope">
-        <div class="place-fetchtakeout ng-isolate-scope" >
+    <div class="place-tab container">
+        <div class="place-fetchtakeout" >
             <img src="takeout.png" alt="谁去拿外卖"></div>
     </div>
-    <div class="container ng-scope">
+    <div class="container">
         <div class="excavator container">
-            <div class="excavator-filter ng-scope">
+            <div class="excavator-filter">
                 <span class="excavator-filter-name">商家分类:</span>
-                <a class="excavator-filter-item ng-binding ng-scope focus" href="javascript:">全部商家</a>
-                <a class="excavator-filter-item ng-binding ng-scope premium" href="javascript:">品牌商家</a>
-                <a class="excavator-filter-item ng-binding ng-scope" href="javascript:">快餐便当</a>
-                <a class="excavator-filter-item ng-binding ng-scope" href="javascript:">特色菜系</a>
-                <a class="excavator-filter-item ng-binding ng-scope" href="javascript:">异国料理</a>
-                <a class="excavator-filter-item ng-binding ng-scope" href="javascript:">小吃夜宵</a>
-                <a class="excavator-filter-item ng-binding ng-scope" href="javascript:">甜品饮品</a>
-                <a class="excavator-filter-item ng-binding ng-scope" href="javascript:">果蔬生鲜</a>
-                <a class="excavator-filter-item ng-binding ng-scope" href="javascript:">鲜花蛋糕</a>
-                <a class="excavator-filter-item ng-binding ng-scope" href="javascript:">商店超市</a>
-                <div class="excavator-filter-subbox ng-hide">
+                <a class="excavator-filter-item focus" href="javascript:">全部商家</a>
+                <a class="excavator-filter-item premium" href="javascript:">品牌商家</a>
+                <a class="excavator-filter-item" href="javascript:">快餐便当</a>
+                <a class="excavator-filter-item" href="javascript:">特色菜系</a>
+                <a class="excavator-filter-item" href="javascript:">异国料理</a>
+                <a class="excavator-filter-item" href="javascript:">小吃夜宵</a>
+                <a class="excavator-filter-item" href="javascript:">甜品饮品</a>
+                <a class="excavator-filter-item" href="javascript:">果蔬生鲜</a>
+                <a class="excavator-filter-item" href="javascript:">鲜花蛋糕</a>
+                <a class="excavator-filter-item" href="javascript:">商店超市</a>
+                <div class="excavator-filter-subbox">
                 </div>
             </div>
             <div class="excavator-bgbar">
@@ -215,57 +215,59 @@
                     <a href="JavaScript:" class="excavator-sort-item focus">默认排序</a>
                     <a href="JavaScript:" class="excavator-sort-item">销量高</a>
                     <a href="JavaScript:" class="excavator-sort-item">评价好</a>
-                    <div class="excavator-sort-item" class="ng-binding">其他排序</span>
+                    <div class="excavator-sort-item">
+                        <a href="JavaScript:">
+                            <span>其他排序</span>
                             <i class="icon-arrow-down"></i>
                             <i class="icon-arrow-up"></i>
                         </a>
                         <div class="excavator-sort-dropdown">
-                            <a href="JavaScript:" class="">距离最近</a>
-                            <a href="JavaScript:" class="">配送速度</a>
-                            <a href="JavaScript:" class="">起送金额</a>
+                            <a href="JavaScript:">距离最近</a>
+                            <a href="JavaScript:">配送速度</a>
+                            <a href="JavaScript:">起送金额</a>
                         </div>
                     </div>
                     <div class="excavator-sort-item">
                         <a href="JavaScript:">
-                            <span class="ng-binding">起送价格: 不限</span>
+                            <span>起送价格: 不限</span>
                             <i class="icon-arrow-down"></i>
                             <i class="icon-arrow-up"></i>
                         </a>
                         <div class="excavator-sort-dropdown wide">
                             <a href="JavaScript:" class="focus">不限</a>
-                            <a href="JavaScript:" class="ng-binding ng-scope">15元以下</a>
-                            <a href="JavaScript:" class="ng-binding ng-scope">20元以下</a>
-                            <a href="JavaScript:" class="ng-binding ng-scope">30元以下</a>
-                            <a href="JavaScript:" class="ng-binding ng-scope">40元以下</a>
+                            <a href="JavaScript:">15元以下</a>
+                            <a href="JavaScript:">20元以下</a>
+                            <a href="JavaScript:">30元以下</a>
+                            <a href="JavaScript:">40元以下</a>
                         </div>
                     </div>
                 </div>
                 <div class="excavator-option">
                     <label class="excavator-option-item">
-                        <input type="checkbox" ubt-click="382" class="ng-pristine ng-valid">新开商家</label>
+                        <input type="checkbox">新开商家</label>
                     <label class="excavator-option-item">
-                        <input type="checkbox" ubt-click="384" class="ng-pristine ng-valid">免配送费</label>
+                        <input type="checkbox">免配送费</label>
                     <label class="excavator-option-item">
-                        <input type="checkbox" class="ng-pristine ng-valid">蜂鸟专送</label>
+                        <input type="checkbox">蜂鸟专送</label>
                     <label class="excavator-option-item">
-                        <input type="checkbox" class="ng-pristine ng-valid">可开发票</label>
+                        <input type="checkbox">可开发票</label>
                     <label class="excavator-option-item">
-                        <input type="checkbox" class="ng-pristine ng-valid">在线支付</label>
+                        <input type="checkbox">在线支付</label>
                 </div>
                 <span class="justify_fix"></span>
             </div>
         </div>
-        <div class="place-tips ng-scope" ng-if="place.premiumCount">
-            <span ng-if="place.premiumCount" class="ng-scope">
+        <div class="place-tips">
+            <span>
                 想吃好点的，看看附近
-                <var class="ng-binding">36 家</var>
+                <var>36 家</var>
                 品牌商家吧，
-                <a href="https://www.ele.me/premium" ubt-click="388">立即查看</a>
+                <a href="https://www.ele.me/premium">立即查看</a>
             </span>
         </div>
         <div class="place-rstbox">
             <div class="clearfix" style="height: 840px;">
-                <a href="https://www.ele.me/shop/78" data-rst-id="78" target="_blank" class="rstblock">
+                <a href="https://www.ele.me/shop/78" target="_blank" class="rstblock">
                     <div class="rstblock-logo">
                         <img src="shop.jpg" width="70" height="70" alt="可顿-奶茶汉堡" class="rstblock-logo-icon">
                         <span>40 分钟</span>
@@ -287,7 +289,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="https://www.ele.me/shop/15607" data-rst-id="15607" target="_blank" class="rstblock">
+                <a href="https://www.ele.me/shop/15607" target="_blank" class="rstblock">
                     <div class="rstblock-logo">
                         <img src="shop.jpg" width="70" height="70" alt="云上茶饮" class="rstblock-logo-icon">
                         <span>40 分钟</span>
@@ -308,7 +310,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="https://www.ele.me/shop/8048" data-rst-id="8048" target="_blank" class="rstblock">
+                <a href="https://www.ele.me/shop/8048" target="_blank" class="rstblock">
                     <div class="rstblock-logo">
                         <img src="shop.jpg" width="70" height="70" alt="香港仔" class="rstblock-logo-icon">
                         <span>40 分钟</span>
@@ -328,7 +330,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="https://www.ele.me/shop/102129" data-rst-id="102129" target="_blank" class="rstblock">
+                <a href="https://www.ele.me/shop/102129" target="_blank" class="rstblock">
                     <div class="rstblock-logo">
                         <img src="shop.jpg" width="70" height="70" alt="悸动烧仙草（德宏路店）" class="rstblock-logo-icon">
                         <span>40 分钟</span>
@@ -343,12 +345,12 @@
                         <div class="rstblock-activity">
                             <i style="background:#f4a937;">专</i>
                             <i style="background:#70bc46;">首</i>
-                            <i style="background:#f07373;">7</i>
+                            <i style="background:#f1884f;">饱</i>
                             <i style="background:#fff;color:#FF4E00;border:1px solid;padding:0;">付</i>
                         </div>
                     </div>
                 </a>
-                <a href="https://www.ele.me/shop/727043" data-rst-id="727043" target="_blank" class="rstblock">
+                <a href="https://www.ele.me/shop/727043" target="_blank" class="rstblock">
                     <div class="rstblock-logo">
                         <img src="shop.jpg" width="70" height="70" alt="萨莱诺披萨" class="rstblock-logo-icon">
                         <span>34 分钟</span>
@@ -364,15 +366,15 @@
                             <i style="background:#f4a937;">专</i>
                             <i style="background:#f07373;">减</i>
                             <i style="background:#70bc46;">首</i>
-                            <i style="background:#f07373;">6</i>
-                            <i style="background:#f07373;">5</i>
-                            <i style="background:#f07373;">7</i>
+                            <i style="background:#f07373;">宵</i>
+                            <i style="background:#f07373;">宵</i>
+                            <i style="background:#f1884f;">饱</i>
                             <i style="background:#fff;color:#4B9A18;border:1px solid;padding:0;">保</i>
                             <i style="background:#fff;color:#FF4E00;border:1px solid;padding:0;">付</i>
                         </div>
                     </div>
                 </a>
-                <a href="https://www.ele.me/shop/33064" data-rst-id="33064" target="_blank" class="rstblock">
+                <a href="https://www.ele.me/shop/33064" target="_blank" class="rstblock">
                     <div class="rstblock-logo">
                         <img src="shop.jpg" width="70" height="70" alt="阿姨奶茶" class="rstblock-logo-icon">
                         <span>40 分钟</span>
@@ -388,13 +390,13 @@
                             <i style="background:#f4a937;">专</i>
                             <i style="background:#f07373;">减</i>
                             <i style="background:#70bc46;">首</i>
-                            <i style="background:#f07373;">7</i>
-                            <i style="background:#f07373;">6</i>
+                            <i style="background:#f1884f;">饱</i>
+                            <i style="background:#f07373;">宵</i>
                             <i style="background:#fff;color:#FF4E00;border:1px solid;padding:0;">付</i>
                         </div>
                     </div>
                 </a>
-                <a href="https://www.ele.me/shop/394946" data-rst-id="394946" target="_blank" class="rstblock">
+                <a href="https://www.ele.me/shop/394946" target="_blank" class="rstblock">
                     <div class="rstblock-logo">
                         <img src="shop.jpg" width="70" height="70" alt="风行茶饮" class="rstblock-logo-icon">
                         <span>40 分钟</span>
@@ -411,12 +413,12 @@
                             <i style="background:#3cc791;">赠</i>
                             <i style="background:#70bc46;">首</i>
                             <i style="background:#f07373;">折</i>
-                            <i style="background:#f07373;">7</i>
+                            <i style="background:#f1884f;">饱</i>
                             <i style="background:#fff;color:#FF4E00;border:1px solid;padding:0;">付</i>
                         </div>
                     </div>
                 </a>
-                <a href="https://www.ele.me/shop/58" data-rst-id="58" target="_blank" class="rstblock">
+                <a href="https://www.ele.me/shop/58" target="_blank" class="rstblock">
                     <div class="rstblock-logo">
                         <img src="shop.jpg" width="70" height="70" alt="三角烧" class="rstblock-logo-icon">
                         <span>40 分钟</span>
@@ -453,7 +455,7 @@
                             <i style="background:#f07373;">减</i>
                             <i style="background:#70bc46;">首</i>
                             <i style="background:#f07373;">折</i>
-                            <i style="background:#f07373;">7</i>
+                            <i style="background:#f1884f;">饱</i>
                             <i style="background:#fff;color:#FF4E00;border:1px solid;padding:0;">付</i>
                         </div>
                     </div>
@@ -474,7 +476,7 @@
                             <i style="background:#f4a937;">专</i>
                             <i style="background:#f07373;">减</i>
                             <i style="background:#70bc46;">首</i>
-                            <i style="background:#f07373;">6</i>
+                            <i style="background:#f07373;">宵</i>
                             <i style="background:#fff;color:#FF4E00;border:1px solid;padding:0;">付</i>
                         </div>
                     </div>
@@ -494,7 +496,7 @@
                         <div class="rstblock-activity">
                             <i style="background:#f07373;">减</i>
                             <i style="background:#70bc46;">首</i>
-                            <i style="background:#f07373;">7</i>
+                            <i style="background:#f1884f;">饱</i>
                             <i style="background:#fff;color:#FF4E00;border:1px solid;padding:0;">付</i>
                         </div>
                     </div>
@@ -570,7 +572,7 @@
                         <div class="rstblock-cost">30元起送 / 免费配送</div>
                         <div class="rstblock-activity">
                             <i style="background:#70bc46;">首</i>
-                            <i style="background:#f07373;">7</i>
+                            <i style="background:#f1884f;">饱</i>
                             <i style="background:#fff;color:#FF4E00;border:1px solid;padding:0;">付</i>
                         </div>
                     </div>
@@ -704,17 +706,17 @@
                 <span class="rstblock left_fix">&nbsp;</span>
                 <span class="rstblock left_fix">&nbsp;</span>
             </div>
-            <div class="" id="fetchMoreRst" ng-hide="rstStream.status === 'LOADING' || rstStream.status === 'COMPLETE'">点击加载更多商家...</div>
+            <div id="fetchMoreRst">点击加载更多商家...</div>
         </div>
     </div>
-</div>
+</main>
 <footer class="footer" role="contentinfo">
     <div class="container">
         <div class="footer-link">
             <h3 class="footer-link-title">用户帮助</h3>
             <a class="footer-link-item" href="https://www.ele.me/support/center" target="_blank">服务中心</a>
             <a class="footer-link-item" href="https://www.ele.me/support/question/default" target="_blank">常见问题</a>
-            <a class="footer-link-item" online-service="" href="javascript:" style="visibility: visible;">在线客服</a>
+            <a class="footer-link-item" href="javascript:" style="visibility: visible;">在线客服</a>
         </div>
         <div class="footer-link">
             <h3 class="footer-link-title">商务合作</h3>
@@ -741,8 +743,8 @@
             </div>
             <div class="footer-contect-item">
                 关注我们 :
-                <div href="JavaScript:" class="icon-wechat" ubt-click="402">
-                    <div class="dropbox dropbox-bottom footer-contect-dropbox" ubt-visit="402">
+                <div href="JavaScript:" class="icon-wechat">
+                    <div class="dropbox dropbox-bottom footer-contect-dropbox">
                         <img src="wexinqc100@2x.c310b6.png" alt="微信号: elemeorder">
                         <p>微信号: elemeorder</p>
                         <p>饿了么网上订餐</p>

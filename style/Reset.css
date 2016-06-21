@@ -7,7 +7,7 @@ html {
 *,:after,:before {
     box-sizing:inherit;
 }
-body,footer,h1,h2,h3,h4,header,input,li,nav,ol,p,section,ul {
+body,footer,h1,h2,h3,h4,header,main,input,li,nav,ol,p,section,ul {
     margin:0;
     padding:0;
 }
@@ -38,10 +38,6 @@ a.inherit {
 }
 a {
     text-decoration:none;
-}
-.typo-small {
-    font-size:.9em;
-    color:#888;
 }
 .serif {
     font-family:Palatino,Optima,Georgia,serif;
@@ -452,6 +448,10 @@ body {
     margin: 0 auto;
     width: 960px;
 }
+.contain{
+    text-align:left;
+    white-space:nowrap;
+}
 .container {
     font-size: 0;
     width:960px;
@@ -482,10 +482,10 @@ body {
     z-index:6;
 }
 .dropbox:before {
+    position:absolute;
     content:' ';
     border:5px solid #fff;
     display:block;
-    position:absolute;
     top:-10px;
 }
 .dropbox.dropbox-bottom:before {
@@ -496,7 +496,7 @@ body {
     border:none\9;
 }
 .elemeicon {
-    background:url(//static11.elemecdn.com/eleme/desktop/media/img/icon.d5d696.png) no-repeat;
+    background:url(../icon.png) no-repeat;
 }
 .elemeicon-hot {
     background-position:0 -226px;
@@ -519,8 +519,8 @@ body {
     line-height:30px;
 }
 .footer-contect-item,.footer-link-item {
-    color:#999;
     display:block;
+    color:#999;
     line-height:24px;
 }
 .footer-link-item {
@@ -548,10 +548,10 @@ body {
     font-size:14px;
 }
 .footer-contect-item [class^=icon-] {
-    cursor:pointer;
     position:relative;
-    margin-left:10px;
     display:inline-block;
+    cursor:pointer;
+    margin-left:10px;
 }
 .footer-contect-item [class^=icon-]:before {
     font-size:24px;
@@ -705,30 +705,30 @@ body {
 }
 .location-dropbox {
     position:absolute;
-    left:0;
     display:none;
+    left:0;
+    z-index:6;
     margin-top:-8px;
+    padding:0;
     background:#fff;
     color:#999;
     box-shadow:0 1px 3px rgba(0,0,0,.2);
-    z-index:6;
-    list-style:none;
-    padding:0;
+    list-style:none; 
 }
 .location-dropbox:before {
     display:none;
 }
-.location-dropbox>.arrow {
-    z-index:1;
+.location-dropbox .arrow {
     position:absolute;
+    top:-5px;
+    left:30px;
+    z-index:1;
     width:7px;
     height:7px;
+    background:#fff;
     border:1px solid #f5f5f5;
     border-bottom:0;
     border-right:0;
-    background:#fff;
-    top:-5px;
-    left:30px;
     -webkit-transform:rotate(45deg);
     -ms-transform:rotate(45deg);
     transform:rotate(45deg);
@@ -776,20 +776,6 @@ body {
 .nodata a {
     margin:0 5px;
 }
-.nodata-container {
-    display:inline-block;
-    padding-left:110px;
-    line-height:115px;
-    background:url(//static11.elemecdn.com/eleme/desktop/media/img/nodata.6477c5.png) no-repeat;
-    color:#999;
-}
-@media all and (-webkit-min-device-pixel-ratio:2),all and (min-resolution:2dppx) {
-    .nodata-container {
-        background-image:url(//static11.elemecdn.com/eleme/desktop/media/img/nodata-2x.18ccdf.png);
-        background-size:85px auto
-   ;
-};
-}
 .starrating span:before,.starrating:before {
     content:"\e950\e950\e950\e950\e950";
 }
@@ -809,24 +795,19 @@ body {
 }
 .clearfix {
     text-align:justify;
-    width:100%;
-    padding:0px;
-    font-size:0px;
-    overflow:hidden;    
+    font-size:0px;   
 }
 .rstblock, .rstblock-logo {
     font-size:12px;
-    position:relative;
+    left:0px;
 }
 .rstblock {
+    position: relative;
     display:inline-block;
     vertical-align:top;
-    text-align:justify;
     background-color:#fff;
     border-bottom:1px #f5f5f5 solid;
-    width:33.33333%;
     height:140px;
-    white-space:nowrap;
 }
 .rstblock:hover {
     background-color:#f5f5f5;
@@ -834,20 +815,12 @@ body {
 .rstblock:hover .rstblock-title {
     color:#0089dc;
 }
-@media (min-width:1260px) {
-    .rstblock {
-        width:25%;
-    }
-}
-.ie8wide .rstblock {
-    width:25%;
-}
 .rstblock.noline {
     border:none;
     margin:0;
 }
 .rstblock-logo {
-    display:inline-block;
+    position:absolute;
     padding:20px;
     color:#999;
     text-align:center;
@@ -870,11 +843,8 @@ body {
     color:#c00;
 }
 .rstblock-content {
-    display:inline-block;
-    vertical-align:top;
-    padding:20px;
-    white-space:nowrap;
-    overflow:hidden;
+    padding:20px 20px 20px 130px;
+
 }
 .rstblock-title {
     font-size:16px;
@@ -918,6 +888,8 @@ body {
 }
 .rstblock-activity {
     margin-top:9px;
+    font-size:0px;
+    text-align:left;
 }
 .rstblock-activity i {
     display:inline-block;
@@ -1087,13 +1059,13 @@ body {
     background:#006bc7;
     outline:0;
 }
-.topbar-item.topbar-homepage {
+.topbar-homepage {
     width:112px!important;
 }
 .topbar-item .elemeicon-hot {
+    position:absolute;
     width:30px;
     height:20px;
-    position:absolute;
     right:0;
     top:4px;
 }
@@ -1116,13 +1088,13 @@ body {
     color:#d2e7f9;
 }
 .topbar-nav-link {
+    position:relative;
     display:inline-block;
     vertical-align: top;
     white-space:nowrap;    
     padding:0 10px;
     width:106px;
     color:inherit;
-    position:relative;
     cursor:pointer;
 }
 .topbar-nav-link:last-child {
@@ -1196,8 +1168,8 @@ body {
     width:auto;
 }
 .topbar-profilebox-wrapper {
+    position:relative;  
     display:inline-block;
-    position:relative;
     cursor:default;
 }
 .topbar-profilebox-wrapper:hover .topbar-profilebox-dropbox {
@@ -1255,9 +1227,6 @@ body {
     height:0; 
     overflow:hidden;
 }
-.ng-hide32 { 
-    display: none ! important; 
-}
 .place-ad {
     margin-bottom: 10px;
     clear: both;
@@ -1284,14 +1253,14 @@ body {
     }
 }
 
-.place-search { 
+.place-search {
+    position: relative;
     display: inline-block; 
     vertical-align: middle;
     width:284px;
     height: 32px;
     border: 1px solid #ccc;
     background: #fff;
-    position: relative;
     z-index: 3;
 }
 .place-search-btn {
@@ -1334,11 +1303,11 @@ body {
     margin-right: 5px;
 }
 .place-fetchtakeout {
+    position: relative;
     margin-bottom: 6px;
     display: inline-block;
     width: 186px;
     height: 42px;
-    position: relative;
     cursor: pointer;
     z-index: 2;
 }
@@ -1351,10 +1320,10 @@ body {
     border: 1px solid #e6e6e6;
 }
 .excavator-filter {
+    position: relative;
     line-height: 26px;
     padding: 10px 10px 10px 7em;
     background-color: #fff;
-    position: relative;
 }
 .excavator-filter-name {
     position: absolute;
@@ -1399,16 +1368,14 @@ body {
     display: none;
 }
 .place-search {
-    float: right;
+    position: relative;
     margin: 10px 0;
     height: 32px;
     border: 1px solid #ccc;
     background: #fff;
-    position: relative;
     z-index: 3;
 }
 .place-search-btn {
-    float: right;
     width: 46px;
     text-align: center;
     color: #999;
@@ -1440,8 +1407,8 @@ body {
     box-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
 .searchbox-list {
-    padding-left: 60px;
     position: relative;
+    padding-left: 60px;
     background-color: #ededed;
 }
 .searchbox-list ul {
@@ -1468,9 +1435,9 @@ body {
     color: #666;
 }
 .excavator-sort-item {
-    padding: 0 7px;
-    float: left;
     position: relative;
+    display: inline-block;
+    padding: 0 7px;
 }
 .excavator-sort-item .icon-arrow-down {
     vertical-align: middle;
@@ -1479,9 +1446,22 @@ body {
     display: none;
     vertical-align: middle;
 }
-.excavator-sort-dropdown {
+.excavator-sort-item:hover > a:first-child {
+    position: relative;
+    z-index: 999;
+}
+.excavator-sort-item:hover .excavator-sort-dropdown {
+    display: block;
+}
+.excavator-sort-item:hover .icon-arrow-down {
     display: none;
+}
+.excavator-sort-item:hover .icon-arrow-up {
+    display: inline-block;
+}
+.excavator-sort-dropdown {
     position: absolute;
+    display: none;
     top: 0;
     left: -3px;
     width: 97px;
@@ -1555,4 +1535,8 @@ body {
     cursor: pointer;
     color: #777;
 }
-
+@media (min-width: 1260px) {
+    .rstblock {
+        width: 25%;
+    }
+}
