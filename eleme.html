@@ -28,8 +28,47 @@
     <link rel="icon" href="https://static2.ele.me/eleme/desktop/media/img/favicon.png" type="image/png" sizes="96x96">
     <title>饿了吗</title>
     <link rel="stylesheet" type="text/css" href="style/Reset.css">
+    <script type="text/javascript">
+        window.onload = function(){
+            var list = document.getElementById("carousel-list");
+            var oClick = document.getElementById("carousel-pager").getElementsByTagName("li");
+            var funMove = function(pos){
+                list.style.top = pos + "px";
+            }
+            for(var i=0; i<oClick.length; i+=1){
+                var flag = 0;
+                var timeout;
+                oClick[i].onmousedown = function(i){
+                    return function(e){
+                        clearTimeout(timeout);
+                        oClick[flag].className = "page-number";
+                        this.className = "page-number active";
+                        funMove(-98*i);
+                        flag = i;
+                    }
+                }(i);
+                oClick[i].onmouseup = function(i){
+                    return function(e){
+                        timeout = setTimeout(step,4000);
+                    }
+                }(i);
+                //定时器播放动画
+                if(i === 0){
+                    var step = function(){
+                        oClick[flag].className = "page-number";
+                        flag = flag>=oClick.length-1?0:flag+1;
+                        oClick[flag].className = "page-number active";
+                        funMove(-98*flag);
+                        timeout = setTimeout(step,4000);
+                    };
+                    setTimeout(step,4000);        
+                }
+            }
+        }
+    </script>
 </head>
 <body>
+
 <header class="topbar" role="navigation">
     <div class="container">
         <h1>
@@ -129,7 +168,7 @@
     </div>
     <div class="place-ad container" role="banner">
         <div class="activity-carousel carousel-wrapper" carousel="">
-            <ul class="carousel-list" style="top: 0px;">
+            <ul class="carousel-list" id="carousel-list" style="top: 0px;">
                 <li class="carousel-block">
                     <a rel="nofollow" href="https://www.ele.me/activity/609">
                         <img src="https://fuss10.elemecdn.com/e/ea/6aff99c88dbc4eed6b46034886b8fpng.png"></a>
@@ -143,9 +182,9 @@
                         <img src="https://fuss10.elemecdn.com/a/20/39f31c22d1f01b35d79b2a06da1ebpng.png"></a>
                 </li>
             </ul>
-            <ol class="carousel-pager">
-                <li class="page-number">1</li>
-                <li class="page-number active">2</li>
+            <ol class="carousel-pager" id="carousel-pager">
+                <li class="page-number active">1</li>
+                <li class="page-number">2</li>
                 <li class="page-number">3</li>
             </ol>
         </div>
